@@ -141,7 +141,6 @@ img{max-width: 100%;}
 	align-items: center;
 	justify-content: space-between;
 	background: #ffffff;
-	background: #000;
 }
 .sub-header .left-section{
 	display: -webkit-flex;
