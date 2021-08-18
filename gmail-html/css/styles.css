@@ -6,7 +6,6 @@
 	box-sizing: border-box;
 }
 
-
 html, body, #main, .wrapper{
 	width: 100%;
 	height: 100%;
@@ -142,6 +141,7 @@ img{max-width: 100%;}
 	align-items: center;
 	justify-content: space-between;
 	background: #ffffff;
+	background: #000;
 }
 .sub-header .left-section{
 	display: -webkit-flex;
