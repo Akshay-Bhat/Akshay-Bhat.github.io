@@ -19,10 +19,12 @@ img{max-width: 100%;}
 .error{background-color: #9E16DE;}
 .brand-03{background-color: #EA2D1F;}
 .warning{background-color: #FF9700;}
+.neutral-05{background-color: #F7F8FA;}
 
 .secondary-01{color: #002762;}
 .white{color: #FFFFFF;}
 .neutral-02{color: #505053;}
+.neutral-01{color: #1D1D1D;}
 
 .tags{
 	padding: 2px 6px;
@@ -75,7 +77,7 @@ img{max-width: 100%;}
 	min-width: 14px;
 	width: 14px;
 	height: 14px;
-	border-radius: 2px;
+	border-radius: 1.5px;
 	background: #ffffff;
 	border: 1.5px solid #505053;
     cursor: pointer;
@@ -85,11 +87,11 @@ img{max-width: 100%;}
 	content: '';
 	display: block;
 	position: absolute;
-	top: 1px;
-    left: 1px;
-    width: 12px;
-    height: 12px;
-    border-radius: 1px;
+	top: 0;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    border-radius: 1.5px;
     background: transparent;
     background-position: center center;
 	transition: all 0.3s;
@@ -99,6 +101,64 @@ img{max-width: 100%;}
 	background-position: center center;
 	transition: all 0.3s;
 }
+
+/* Secondary Checkbox */
+.secondary-check-box{position: relative;}
+.secondary-check-box label{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: flex-start;
+	align-items: flex-start;
+	position: relative;
+	font: 11px/15px 'Roboto', sans-serif;
+	font-weight: 400;
+	color: #1D1D1D;
+	transition: all 0.3s;
+}
+.secondary-check-box input{
+	display: none;
+	margin: 0;
+    width: 16px;
+    height: 16px;
+}
+.secondary-check-box label:before{
+	content: '\00a0';
+	display: inline-block;
+	min-width: 16px;
+	width: 16px;
+	height: 16px;
+	border-radius: 16px;
+	background: #ffffff;
+	border: 1px solid #CDD2DB;
+    cursor: pointer;
+    margin-right: 5px;
+    transition: all 0.3s;
+}
+.secondary-check-box input + label:after{
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 16px;
+    background: transparent;
+    background-position: center center;
+	transition: all 0.3s;
+}
+.secondary-check-box input:checked + label:after{
+	background: #EA2D1F url('../images/check-box-tick.svg') no-repeat;
+	background-position: center center;
+	transition: all 0.3s;
+}
+.secondary-check-box input:checked + label{
+	color: #8C8C8C;
+}
+/* END Secondary Checkbox */
 /* END Global */
 
 /* Header */
@@ -215,7 +275,6 @@ img{max-width: 100%;}
 .sub-header .right-section .add-user{
 	display: block;
 	margin-left: 5px;
-	padding: 2px 0;
 }
 .sub-header .right-section .add-user img{display: block;}
 .sub-header .filter-holder{
@@ -224,13 +283,11 @@ img{max-width: 100%;}
 }
 .sub-header .filter-holder .filter-button{
 	display: block;
-	padding: 2px 0;
 }
 .sub-header .filter-holder .filter-button img{display: block;}
 .sub-header .search-button{
 	display: block;
 	margin-left: 20px;
-	padding: 2px 0;
 }
 .sub-header .search-button img{display: block;}
 /* Switch */
@@ -486,6 +543,7 @@ img{max-width: 100%;}
 .card .email-action .task .icon-holder path{
 	transition: all 0.3s;
 }
+.card .email-action .task.active .icon-holder path,
 .card .email-action .task:hover .icon-holder path{
 	fill: #1F70EA;
 	transition: all 0.3s;
@@ -531,6 +589,25 @@ img{max-width: 100%;}
 	font: 10px/14px 'Roboto', sans-serif;
 	font-weight: 500;
 	letter-spacing: 0.02em;
+}
+.card.dragging{
+	background-color: #F7F8FA;
+	cursor: move;
+}
+.card.dragging .card-actions{background-color: #F7F8FA;}
+
+.card.drop-card{background-color: #E9F1FF;}
+.card.drop-card:before{
+	content: '';
+    display: block;
+    border: 1px solid #1F70EA;
+    position: absolute;
+    top: 0;
+    left: -2px;
+    width: calc(100% + 2px);
+    height: 100%;
+    border-radius: 2px;
+    z-index: 0;
 }
 
 .assigned-user-list{
@@ -593,15 +670,110 @@ img{max-width: 100%;}
 	align-items: center;
 	justify-content: center;
 	margin: 0 6px 0 0;
-	padding: 2px;
 	width: 18px;
 }
-.card-actions a img{
-	display: block;
-	max-height: 14px;
-}
-.card-actions a:nth-child(3) img{min-width: 15px;}
+.card-actions a img{display: block;}
 .card-actions a:last-child{margin: 0;}
 /* END Card */
+
+/* Board View Selected */
+ul.view-selected-actions{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;	
+}
+ul.view-selected-actions li{margin-right: 12px;}
+ul.view-selected-actions li button{display: block;}
+ul.view-selected-actions li button img{display: block;}
+/* END Board View Selected */
+
+/* Card Expand */
+.task-expand{
+	position: relative;
+	width: calc(100% + 20px);
+    margin: 10px 0 -10px -10px;
+	border: 2px solid #FFFFFF;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	-ms-align-items: flex-start;
+	align-items: flex-start;
+	padding: 12px 6px 12px 12px;
+}
+.task-expand .task-close-button{
+	display: block;
+	position: absolute;
+	top: 4px;
+	right: 3px;
+	z-index: 1;
+	cursor: pointer;
+}
+.task-expand .task-close-button img{display: block;}
+.task-expand ul.task-list li{margin-bottom: 5px;}
+.task-expand ul.task-list li:last-child{margin-bottom: 0;}
+/* END Card Expand */
+
+/* Add New Card */
+.add-new-card{height: 38px;}
+.add-new-card input{
+	display: block;
+    font: 13px/18px 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #505053;
+    padding: 9px 10px;
+	background: transparent;
+	border-radius: 2px;
+	width: 100%;
+	height: 38px;
+	position: absolute;
+	top: 0;
+	left: 0;
+    z-index: 1;
+}
+.add-new-card input::placeholder{color: #1D1D1D;}
+.add-new-card:before{
+	content: '';
+    display: block;
+    border: 1px solid #1F70EA;
+    position: absolute;
+    top: 0;
+    left: -2px;
+    width: calc(100% + 2px);
+    height: 100%;
+    border-radius: 2px;
+    z-index: 0;
+}
+/* END Add New Card */
+
+/* Rename Card */
+.rename-text{border-bottom: 1px dashed #8C8C8C;}
+.rename-card{height: 38px;}
+.rename-card input{
+	display: block;
+    font: 13px/18px 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #505053;
+    padding: 9px 10px;
+	background: transparent;
+	border-radius: 2px;
+	width: 100%;
+	height: 38px;
+	position: absolute;
+	top: 0;
+	left: 0;
+    z-index: 1;
+}
+/* END Rename Card */
 
 /* END Container */

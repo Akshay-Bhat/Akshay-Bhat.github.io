@@ -6,28 +6,28 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Gmail</title>
-<link rel="shortcut icon" href="images/favicon.ico" />
+<link rel="shortcut icon" href="../images/favicon.ico" />
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 <!-- END Google Fonts -->
-<link rel="stylesheet" type="text/css" href="css/reset.css" media="all" />
-<link rel="stylesheet" type="text/css" href="css/styles.css" media="all" />
+<link rel="stylesheet" type="text/css" href="../css/reset.css" media="all" />
+<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 </head>
 <body>
 	<div id="main">
 		<div class="wrapper">
 			<!-- Header -->
 			<header id="header">
-				<img src="images/header.png" alt="">
+				<img src="../images/header.png" alt="">
 			</header>
 			<!-- END Header -->
 			
 			<!-- Container -->
 			<article id="container">
 				<!-- Aside -->
-				<aside id="aside"><img src="images/aside.png" alt=""></aside>
+				<aside id="aside"><img src="../images/aside.png" alt=""></aside>
 				<!-- END Aside -->
 				
 				<!-- Main Section -->
@@ -37,7 +37,7 @@
 						<div class="left-section">
 							<div class="board-heading">
 								<div class="board-heading-title">
-									Design<a><img src="images/board-down-arrow.svg" alt=""></a>
+									Design<a><img src="../images/board-down-arrow.svg" alt=""></a>
 								</div>
 								<!-- Dropdown goes here -->
 							</div>
@@ -51,21 +51,21 @@
 						<div class="right-section">
 							<div class="assigned-user-holder">
 								<div class="assigned-user-list">
-									<a href="#" class="assigned-user"><img src="images/user-one.png" alt=""></a>
-									<a href="#" class="assigned-user"><img src="images/user-two.png" alt=""></a>
+									<a href="#" class="assigned-user"><img src="../images/user-one.png" alt=""></a>
+									<a href="#" class="assigned-user"><img src="../images/user-two.png" alt=""></a>
 								</div>
 								<button type="button" class="add-user">
-									<img src="images/add-user-icon.svg" alt="">
+									<img src="../images/add-user-icon.svg" alt="">
 								</button>
 							</div>
 							<div class="filter-holder">
 								<button type="button" class="filter-button">
-									<img src="images/filter-icon.svg" alt="">
+									<img src="../images/filter-icon.svg" alt="">
 								</button>
 								<!-- Filter Dropdown goes here -->
 							</div>
 							<button type="button" class="search-button">
-								<img src="images/search-icon.svg" alt="">
+								<img src="../images/search-icon.svg" alt="">
 							</button>
 							<label class="switch">
 								<input type="checkbox" checked>
@@ -82,20 +82,27 @@
 								<div class="column-header">
 									<p class="column-title secondary-01">Backlog<span class="column-count neutral-02">5</span></p>
 									<div class="column-action">
-										<a href="#" class="column-add"><img src="images/blue-pluse.svg" alt=""></a>
-										<a href="#" class="column-menu"><img src="images/blue-menu.svg" alt=""></a>
+										<a href="#" class="column-add"><img src="../images/blue-pluse.svg" alt=""></a>
+										<a href="#" class="column-menu"><img src="../images/blue-menu.svg" alt=""></a>
 									</div>
 								</div>
 								<div class="column-body">
+									
+									<!-- Add New Card -->
+									<div class="card add-new-card">
+										<input type="text" placeholder="Card name" autofocus="autofocus">
+									</div>
+									<!-- END Add New Card -->
+
 									<div class="card">
 										<div class="card-top">
 											<p class="card-title neutral-02">New enquiry (phone call Mr..</p>
 											<p class="received-time neutral-02">10:12 am</p>
 										</div>
 										<div class="card-actions">
-											<a href="#"><img src="images/archive-icon.svg" alt=""></a>
-											<a href="#"><img src="images/delete-icon.svg" alt=""></a>
-											<a href="#"><img src="images/unread-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/archive-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/delete-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/unread-icon.svg" alt=""></a>
 											<div class="check-box">
 												<input type="checkbox" id="check-box-01">
 												<label for="check-box-01"></label>
@@ -117,7 +124,7 @@
 												</span>
 												<span class="value neutral-02">27 Jun</span>
 											</div>
-											<a href="#" class="task">
+											<a href="#" class="task active"> <!-- "active" class has to be added for highlight -->
 												<span class="icon-holder">
 													<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="https://www.w3.org/2000/svg">
 														<path fill-rule="evenodd" clip-rule="evenodd" d="M7.00001 13.4C8.69739 13.4 10.3253 12.7257 11.5255 11.5255C12.7257 10.3253 13.4 8.69739 13.4 7C13.4 5.30261 12.7257 3.67475 11.5255 2.47452C10.3253 1.27428 8.69739 0.6 7.00001 0.6C5.30262 0.6 3.67476 1.27428 2.47452 2.47452C1.27429 3.67475 0.600006 5.30261 0.600006 7C0.600006 8.69739 1.27429 10.3253 2.47452 11.5255C3.67476 12.7257 5.30262 13.4 7.00001 13.4ZM9.96561 5.9656C10.1113 5.81472 10.192 5.61264 10.1901 5.40288C10.1883 5.19312 10.1042 4.99247 9.95586 4.84415C9.80753 4.69582 9.60688 4.61168 9.39713 4.60986C9.18737 4.60804 8.98529 4.68867 8.83441 4.8344L6.20001 7.4688L5.16561 6.4344C5.01472 6.28867 4.81264 6.20804 4.60288 6.20986C4.39313 6.21168 4.19248 6.29582 4.04415 6.44415C3.89582 6.59247 3.81169 6.79312 3.80987 7.00288C3.80804 7.21264 3.88868 7.41472 4.03441 7.5656L5.63441 9.1656C5.78443 9.31558 5.98787 9.39983 6.20001 9.39983C6.41214 9.39983 6.61558 9.31558 6.76561 9.1656L9.96561 5.9656Z" fill="#CDD2DB"/>
@@ -144,9 +151,9 @@
 											</a>
 										</div>
 										<div class="card-actions">
-											<a href="#"><img src="images/archive-icon.svg" alt=""></a>
-											<a href="#"><img src="images/delete-icon.svg" alt=""></a>
-											<a href="#"><img src="images/unread-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/archive-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/delete-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/unread-icon.svg" alt=""></a>
 											<div class="check-box">
 												<input type="checkbox" id="check-box-02">
 												<label for="check-box-02"></label>
@@ -200,13 +207,13 @@
 											</a>
 										</div>
 										<div class="assigned-user-list">
-											<a href="#" class="assigned-user"><img src="images/user-one.png" alt=""></a>
-											<a href="#" class="assigned-user"><img src="images/user-two.png" alt=""></a>
+											<a href="#" class="assigned-user"><img src="../images/user-one.png" alt=""></a>
+											<a href="#" class="assigned-user"><img src="../images/user-two.png" alt=""></a>
 										</div>
 										<div class="card-actions">
-											<a href="#"><img src="images/archive-icon.svg" alt=""></a>
-											<a href="#"><img src="images/delete-icon.svg" alt=""></a>
-											<a href="#"><img src="images/unread-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/archive-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/delete-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/unread-icon.svg" alt=""></a>
 											<div class="check-box">
 												<input type="checkbox" id="check-box-03">
 												<label for="check-box-03"></label>
@@ -259,13 +266,13 @@
 											</a>
 										</div>
 										<div class="assigned-user-list">
-											<a href="#" class="assigned-user"><img src="images/user-one.png" alt=""></a>
-											<a href="#" class="assigned-user"><img src="images/user-two.png" alt=""></a>
+											<a href="#" class="assigned-user"><img src="../images/user-one.png" alt=""></a>
+											<a href="#" class="assigned-user"><img src="../images/user-two.png" alt=""></a>
 										</div>
 										<div class="card-actions">
-											<a href="#"><img src="images/archive-icon.svg" alt=""></a>
-											<a href="#"><img src="images/delete-icon.svg" alt=""></a>
-											<a href="#"><img src="images/unread-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/archive-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/delete-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/unread-icon.svg" alt=""></a>
 											<div class="check-box">
 												<input type="checkbox" id="check-box-04">
 												<label for="check-box-04"></label>
@@ -317,9 +324,9 @@
 											</a>
 										</div>
 										<div class="card-actions">
-											<a href="#"><img src="images/archive-icon.svg" alt=""></a>
-											<a href="#"><img src="images/delete-icon.svg" alt=""></a>
-											<a href="#"><img src="images/unread-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/archive-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/delete-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/unread-icon.svg" alt=""></a>
 											<div class="check-box">
 												<input type="checkbox" id="check-box-05">
 												<label for="check-box-05"></label>
@@ -333,8 +340,8 @@
 								<div class="column-header">
 									<p class="column-title secondary-01">In progress<span class="column-count neutral-02">6</span></p>
 									<div class="column-action">
-										<a href="#" class="column-add"><img src="images/blue-pluse.svg" alt=""></a>
-										<a href="#" class="column-menu"><img src="images/blue-menu.svg" alt=""></a>
+										<a href="#" class="column-add"><img src="../images/blue-pluse.svg" alt=""></a>
+										<a href="#" class="column-menu"><img src="../images/blue-menu.svg" alt=""></a>
 									</div>
 								</div>
 								<div class="column-body">
@@ -383,9 +390,9 @@
 											</a>
 										</div>
 										<div class="card-actions">
-											<a href="#"><img src="images/archive-icon.svg" alt=""></a>
-											<a href="#"><img src="images/delete-icon.svg" alt=""></a>
-											<a href="#"><img src="images/unread-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/archive-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/delete-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/unread-icon.svg" alt=""></a>
 											<div class="check-box">
 												<input type="checkbox" id="check-box-06">
 												<label for="check-box-06"></label>
@@ -437,9 +444,9 @@
 											</a>
 										</div>
 										<div class="card-actions">
-											<a href="#"><img src="images/archive-icon.svg" alt=""></a>
-											<a href="#"><img src="images/delete-icon.svg" alt=""></a>
-											<a href="#"><img src="images/unread-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/archive-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/delete-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/unread-icon.svg" alt=""></a>
 											<div class="check-box">
 												<input type="checkbox" id="check-box-07">
 												<label for="check-box-07"></label>
@@ -488,9 +495,9 @@
 											</a>
 										</div>
 										<div class="card-actions">
-											<a href="#"><img src="images/archive-icon.svg" alt=""></a>
-											<a href="#"><img src="images/delete-icon.svg" alt=""></a>
-											<a href="#"><img src="images/unread-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/archive-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/delete-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/unread-icon.svg" alt=""></a>
 											<div class="check-box">
 												<input type="checkbox" id="check-box-08">
 												<label for="check-box-08"></label>
@@ -543,13 +550,13 @@
 											</a>
 										</div>
 										<div class="assigned-user-list">
-											<a href="#" class="assigned-user"><img src="images/user-one.png" alt=""></a>
-											<a href="#" class="assigned-user"><img src="images/user-two.png" alt=""></a>
+											<a href="#" class="assigned-user"><img src="../images/user-one.png" alt=""></a>
+											<a href="#" class="assigned-user"><img src="../images/user-two.png" alt=""></a>
 										</div>
 										<div class="card-actions">
-											<a href="#"><img src="images/archive-icon.svg" alt=""></a>
-											<a href="#"><img src="images/delete-icon.svg" alt=""></a>
-											<a href="#"><img src="images/unread-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/archive-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/delete-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/unread-icon.svg" alt=""></a>
 											<div class="check-box">
 												<input type="checkbox" id="check-box-09">
 												<label for="check-box-09"></label>
@@ -562,9 +569,9 @@
 											<p class="received-time neutral-02">12:45 pm</p>
 										</div>
 										<div class="card-actions">
-											<a href="#"><img src="images/archive-icon.svg" alt=""></a>
-											<a href="#"><img src="images/delete-icon.svg" alt=""></a>
-											<a href="#"><img src="images/unread-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/archive-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/delete-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/unread-icon.svg" alt=""></a>
 											<div class="check-box">
 												<input type="checkbox" id="check-box-10">
 												<label for="check-box-10"></label>
@@ -618,13 +625,13 @@
 											</a>
 										</div>
 										<div class="assigned-user-list">
-											<a href="#" class="assigned-user"><img src="images/user-one.png" alt=""></a>
-											<a href="#" class="assigned-user"><img src="images/user-two.png" alt=""></a>
+											<a href="#" class="assigned-user"><img src="../images/user-one.png" alt=""></a>
+											<a href="#" class="assigned-user"><img src="../images/user-two.png" alt=""></a>
 										</div>
 										<div class="card-actions">
-											<a href="#"><img src="images/archive-icon.svg" alt=""></a>
-											<a href="#"><img src="images/delete-icon.svg" alt=""></a>
-											<a href="#"><img src="images/unread-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/archive-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/delete-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/unread-icon.svg" alt=""></a>
 											<div class="check-box">
 												<input type="checkbox" id="check-box-11">
 												<label for="check-box-11"></label>
@@ -638,8 +645,8 @@
 								<div class="column-header">
 									<p class="column-title secondary-01">Completed<span class="column-count neutral-02">5</span></p>
 									<div class="column-action">
-										<a href="#" class="column-add"><img src="images/blue-pluse.svg" alt=""></a>
-										<a href="#" class="column-menu"><img src="images/blue-menu.svg" alt=""></a>
+										<a href="#" class="column-add"><img src="../images/blue-pluse.svg" alt=""></a>
+										<a href="#" class="column-menu"><img src="../images/blue-menu.svg" alt=""></a>
 									</div>
 								</div>
 								<div class="column-body">
@@ -685,9 +692,9 @@
 											</a>
 										</div>
 										<div class="card-actions">
-											<a href="#"><img src="images/archive-icon.svg" alt=""></a>
-											<a href="#"><img src="images/delete-icon.svg" alt=""></a>
-											<a href="#"><img src="images/unread-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/archive-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/delete-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/unread-icon.svg" alt=""></a>
 											<div class="check-box">
 												<input type="checkbox" id="check-box-12">
 												<label for="check-box-12"></label>
@@ -700,9 +707,9 @@
 											<p class="received-time neutral-02">10:12 am</p>
 										</div>
 										<div class="card-actions">
-											<a href="#"><img src="images/archive-icon.svg" alt=""></a>
-											<a href="#"><img src="images/delete-icon.svg" alt=""></a>
-											<a href="#"><img src="images/unread-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/archive-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/delete-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/unread-icon.svg" alt=""></a>
 											<div class="check-box">
 												<input type="checkbox" id="check-box-13">
 												<label for="check-box-13"></label>
@@ -755,13 +762,13 @@
 											</a>
 										</div>
 										<div class="assigned-user-list">
-											<a href="#" class="assigned-user"><img src="images/user-one.png" alt=""></a>
-											<a href="#" class="assigned-user"><img src="images/user-two.png" alt=""></a>
+											<a href="#" class="assigned-user"><img src="../images/user-one.png" alt=""></a>
+											<a href="#" class="assigned-user"><img src="../images/user-two.png" alt=""></a>
 										</div>
 										<div class="card-actions">
-											<a href="#"><img src="images/archive-icon.svg" alt=""></a>
-											<a href="#"><img src="images/delete-icon.svg" alt=""></a>
-											<a href="#"><img src="images/unread-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/archive-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/delete-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/unread-icon.svg" alt=""></a>
 											<div class="check-box">
 												<input type="checkbox" id="check-box-14">
 												<label for="check-box-14"></label>
@@ -813,13 +820,13 @@
 											</a>
 										</div>
 										<div class="assigned-user-list">
-											<a href="#" class="assigned-user"><img src="images/user-one.png" alt=""></a>
-											<a href="#" class="assigned-user"><img src="images/user-two.png" alt=""></a>
+											<a href="#" class="assigned-user"><img src="../images/user-one.png" alt=""></a>
+											<a href="#" class="assigned-user"><img src="../images/user-two.png" alt=""></a>
 										</div>
 										<div class="card-actions">
-											<a href="#"><img src="images/archive-icon.svg" alt=""></a>
-											<a href="#"><img src="images/delete-icon.svg" alt=""></a>
-											<a href="#"><img src="images/unread-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/archive-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/delete-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/unread-icon.svg" alt=""></a>
 											<div class="check-box">
 												<input type="checkbox" id="check-box-15">
 												<label for="check-box-15"></label>
@@ -834,8 +841,8 @@
 								<div class="column-header">
 									<p class="column-title secondary-01">Testing<span class="column-count neutral-02">4</span></p>
 									<div class="column-action">
-										<a href="#" class="column-add"><img src="images/blue-pluse.svg" alt=""></a>
-										<a href="#" class="column-menu"><img src="images/blue-menu.svg" alt=""></a>
+										<a href="#" class="column-add"><img src="../images/blue-pluse.svg" alt=""></a>
+										<a href="#" class="column-menu"><img src="../images/blue-menu.svg" alt=""></a>
 									</div>
 								</div>
 								<div class="column-body">
@@ -845,9 +852,9 @@
 											<p class="received-time neutral-02">10:12 am</p>
 										</div>
 										<div class="card-actions">
-											<a href="#"><img src="images/archive-icon.svg" alt=""></a>
-											<a href="#"><img src="images/delete-icon.svg" alt=""></a>
-											<a href="#"><img src="images/unread-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/archive-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/delete-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/unread-icon.svg" alt=""></a>
 											<div class="check-box">
 												<input type="checkbox" id="check-box-16">
 												<label for="check-box-16"></label>
@@ -899,9 +906,9 @@
 											</a>
 										</div>
 										<div class="card-actions">
-											<a href="#"><img src="images/archive-icon.svg" alt=""></a>
-											<a href="#"><img src="images/delete-icon.svg" alt=""></a>
-											<a href="#"><img src="images/unread-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/archive-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/delete-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/unread-icon.svg" alt=""></a>
 											<div class="check-box">
 												<input type="checkbox" id="check-box-17">
 												<label for="check-box-17"></label>
@@ -955,13 +962,13 @@
 											</a>
 										</div>
 										<div class="assigned-user-list">
-											<a href="#" class="assigned-user"><img src="images/user-one.png" alt=""></a>
-											<a href="#" class="assigned-user"><img src="images/user-two.png" alt=""></a>
+											<a href="#" class="assigned-user"><img src="../images/user-one.png" alt=""></a>
+											<a href="#" class="assigned-user"><img src="../images/user-two.png" alt=""></a>
 										</div>
 										<div class="card-actions">
-											<a href="#"><img src="images/archive-icon.svg" alt=""></a>
-											<a href="#"><img src="images/delete-icon.svg" alt=""></a>
-											<a href="#"><img src="images/unread-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/archive-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/delete-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/unread-icon.svg" alt=""></a>
 											<div class="check-box">
 												<input type="checkbox" id="check-box-18">
 												<label for="check-box-18"></label>
@@ -1010,9 +1017,9 @@
 											</a>
 										</div>
 										<div class="card-actions">
-											<a href="#"><img src="images/archive-icon.svg" alt=""></a>
-											<a href="#"><img src="images/delete-icon.svg" alt=""></a>
-											<a href="#"><img src="images/unread-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/archive-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/delete-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/unread-icon.svg" alt=""></a>
 											<div class="check-box">
 												<input type="checkbox" id="check-box-19">
 												<label for="check-box-19"></label>
@@ -1061,9 +1068,9 @@
 											</a>
 										</div>
 										<div class="card-actions">
-											<a href="#"><img src="images/archive-icon.svg" alt=""></a>
-											<a href="#"><img src="images/delete-icon.svg" alt=""></a>
-											<a href="#"><img src="images/unread-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/archive-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/delete-icon.svg" alt=""></a>
+											<a href="#"><img src="../images/unread-icon.svg" alt=""></a>
 											<div class="check-box">
 												<input type="checkbox" id="check-box-20">
 												<label for="check-box-20"></label>
@@ -1077,7 +1084,7 @@
 
 						<div class="new-column-container">
 							<a href="#" class="new-column-button">
-								<span class="icon-hldr"><img src="images/gray-pluse.svg" alt=""></span>
+								<span class="icon-hldr"><img src="../images/gray-pluse.svg" alt=""></span>
 								<span class="button-text neutral-02">New column</span>
 							</a>
 						</div>
