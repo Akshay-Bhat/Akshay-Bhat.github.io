@@ -78,16 +78,9 @@
 					<!-- Main column -->
 					<div class="main-column-holder">
 						<div class="main-column">
-							<div class="each-column column-dragging"> <!-- While draging "column-dragging" class has to be added -->
+							<div class="each-column">
 								<div class="column-header">
-									<p class="column-title secondary-01">Backlog<span class="column-count neutral-02">5</span></p>
-
-									<!-- Column Handel -->
-									<a class="column-drag-handel">
-										<img src="../images/column-drag-icon.svg" alt="">
-									</a>
-									<!-- END Column Handel -->
-
+									<p class="column-title secondary-01"><span class="column-title-name">Backlog</span><span class="column-count neutral-02">5</span></p>
 									<div class="column-action">
 										<a href="#" class="column-add"><img src="../images/blue-pluse.svg" alt=""></a>
 										<a href="#" class="column-menu"><img src="../images/blue-menu.svg" alt=""></a>
@@ -352,7 +345,7 @@
 
 							<div class="each-column">
 								<div class="column-header">
-									<p class="column-title secondary-01">In progress<span class="column-count neutral-02">6</span></p>
+									<p class="column-title secondary-01"><span class="column-title-name">In progress</span><span class="column-count neutral-02">6</span></p>
 									<div class="column-action">
 										<a href="#" class="column-add"><img src="../images/blue-pluse.svg" alt=""></a>
 										<a href="#" class="column-menu"><img src="../images/blue-menu.svg" alt=""></a>
@@ -679,7 +672,10 @@
 
 							<div class="each-column">
 								<div class="column-header">
-									<p class="column-title secondary-01">Completed<span class="column-count neutral-02">5</span></p>
+									<p class="column-title secondary-01">
+										<input type="text" class="column-rename-entry" value="Completed|">
+										<span class="column-count neutral-02">5</span>
+									</p>
 									<div class="column-action">
 										<a href="#" class="column-add"><img src="../images/blue-pluse.svg" alt=""></a>
 										<a href="#" class="column-menu"><img src="../images/blue-menu.svg" alt=""></a>
@@ -891,7 +887,7 @@
 
 							<div class="each-column">
 								<div class="column-header">
-									<p class="column-title secondary-01">Testing<span class="column-count neutral-02">4</span></p>
+									<p class="column-title secondary-01"><span class="column-title-name">In progress</span><span class="column-count neutral-02">4</span></p>
 									<div class="column-action">
 										<a href="#" class="column-add"><img src="../images/blue-pluse.svg" alt=""></a>
 										<a href="#" class="column-menu"><img src="../images/blue-menu.svg" alt=""></a>
@@ -1155,10 +1151,7 @@
 						</div>
 
 						<div class="new-column-container">
-							<a href="#" class="new-column-button">
-								<span class="icon-hldr"><img src="../images/gray-pluse.svg" alt=""></span>
-								<span class="button-text neutral-02">New column</span>
-							</a>
+							<input type="text" class="new-column-name-entry" placeholder="Column name">
 						</div>
 
 					</div>

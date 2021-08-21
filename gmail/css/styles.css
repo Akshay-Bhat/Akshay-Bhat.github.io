@@ -371,15 +371,29 @@ img{max-width: 100%;}
 	display: flex;
 }
 .main-column .each-column{
+	position: relative;
 	min-width: 274px;
 	max-width: 274px;
 	padding: 12px 6px 5px 6px;
 	height: calc(100vh - 105px);
 }
 .main-column .each-column.column-dragging{
+	background: #E8EAEE;
+	box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.25);
+}
+.main-column .each-column .each-column-content{
+	height: 100%;
+}
+.main-column .each-column.column-dragging .each-column-content{
 	background: #F7F8FA;
-	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
-	border-radius: 4px;
+    box-shadow: 0px 2px 5px rgb(0 0 0 / 25%);
+    border-radius: 4px;
+    padding: 12px 6px 5px 6px;
+    position: absolute;
+    top: 30px;
+    left: 240px;
+    z-index: 1;
+    width: 274px;
 }
 
 .column-header{
@@ -396,6 +410,14 @@ img{max-width: 100%;}
 .column-header .column-title{
 	font: 12px/17px 'Roboto', sans-serif;
 	font-weight: 700;
+}
+.column-header .column-title .column-title-name{
+	border-bottom: 1px dashed transparent;
+	transition: all 0.3s;
+}
+.column-header .column-title .column-title-name:hover{
+	border-color: #002762;
+	transition: all 0.3s;
 }
 .column-header .column-title .column-count{
 	font-weight: 400;
@@ -440,8 +462,15 @@ img{max-width: 100%;}
 	display: block;
 	cursor: -webkit-grab;
 	cursor: grab;
+	opacity: 0;
+	transition: all 0.3s;
 }
 .column-header .column-drag-handel img{display: block;}
+.each-column.column-dragging .column-header .column-drag-handel,
+.each-column:hover .column-header .column-drag-handel{
+	opacity: 1;
+	transition: all 0.3s;
+}
 
 .column-dragging .column-header .column-drag-handel{
 	cursor: -webkit-grabbing;
@@ -469,7 +498,7 @@ img{max-width: 100%;}
 .column-body{
     height: calc(100% - 29px);
 	overflow-y: auto;
-    overflow-x: visible;
+    overflow-x: hidden;
 }
 /* END Column */
 
@@ -646,6 +675,7 @@ img{max-width: 100%;}
 .card .email-action .notes .icon-holder path{
 	transition: all 0.3s;
 }
+.card .email-action .notes.active .icon-holder path,
 .card .email-action .notes:hover .icon-holder path{
 	fill: #1F70EA;
 	transition: all 0.3s;
@@ -657,6 +687,10 @@ img{max-width: 100%;}
 }
 .card.dragging{
 	background-color: #F7F8FA;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+	border-radius: 2px;
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
 }
 .card.dragging .card-actions{background-color: #F7F8FA;}
 .card.drop-card .card-actions{background-color: #e9f1ff;}
@@ -664,6 +698,9 @@ img{max-width: 100%;}
 .drag-placeholder{
 	border: 2px solid #1F70EA;
 	margin-bottom: 6px;
+}
+.drag-column-placeholder{
+	border: 2px solid #1F70EA;
 }
 
 .card.drop-card{background-color: #E9F1FF;}
@@ -752,6 +789,11 @@ img{max-width: 100%;}
 	visibility: visible;
 	transition: all 0.3s;
 }
+.card.card-selected .card-actions{
+	opacity: 1;
+	visibility: visible;
+	transition: all 0.3s;
+}
 .card-actions a{
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -814,6 +856,58 @@ ul.view-selected-actions li button img{display: block;}
 .task-expand .task-close-button img{display: block;}
 .task-expand ul.task-list li{margin-bottom: 5px;}
 .task-expand ul.task-list li:last-child{margin-bottom: 0;}
+
+
+.notes-expand{
+	position: relative;
+	width: calc(100% + 20px);
+    margin: 10px 0 -10px -10px;
+	border: 2px solid #FFFFFF;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	-ms-align-items: flex-start;
+	align-items: flex-start;
+	padding: 12px 6px 12px 12px;
+}
+.notes-expand .notes-close-button{
+	display: block;
+	position: absolute;
+	top: 4px;
+	right: 3px;
+	z-index: 1;
+	cursor: pointer;
+}
+.notes-expand .notes-text{
+	font: 11px/15px 'Roboto', sans-serif;
+    font-weight: 400;
+    border-bottom: 1px dashed transparent;
+	cursor: text;
+    transition: all 0.3s;
+}
+.notes-expand .notes-text:hover{
+	border-color: #505053;
+	transition: all 0.3s;
+}
+.notes-expand .notes-input{
+	height: 50px;
+	display: block;
+	width: 100%;
+	padding: 5px;
+	font: 11px/15px 'Roboto', sans-serif;
+    font-weight: 400;
+    margin-top: 10px;
+    border: 1px solid #CDD2DB;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
 /* END Card Expand */
 
 /* Add New Card */
@@ -915,4 +1009,86 @@ ul.view-selected-actions li button img{display: block;}
 }
 /* END Card Expand */
 
+.collapse-column{
+	margin: 5px 8px 6px 8px;
+	border: 1px solid #E8EAEE;
+	width: 24px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	-ms-align-items: center;
+	align-items: center;
+	padding: 6px 0 0;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+.collapse-column:hover{
+	border-color: #A6CAFF;
+	transition: all 0.3s;
+}
+.collapse-column .column-menu{
+	display: block;
+	margin-bottom: 12px;
+}
+.collapse-column .column-menu img{display: block;}
+.collapse-column .collapse-column-heading{
+	font: 12px/17px 'Roboto', sans-serif;
+    font-weight: 400;
+    white-space: nowrap;
+    text-orientation: sideways;
+    writing-mode: vertical-lr;
+}
+.collapse-column .collapse-column-count{
+	font: 12px/17px 'Roboto', sans-serif;
+    font-weight: 400;
+    margin: 6px 0;
+}
 /* END Container */
+
+.right-aside{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	width: 54px;
+	background: #FFFFFF;
+}
+.right-aside img{display: block;}
+
+/* Main Rows */
+.main-row-holder{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+.main-row-holder .main-row-left{
+	-webkit-flex: 1;
+	-moz-flex: 1;
+	-ms-flex: 1;
+	-o-flex: 1;
+	flex: 1;
+}
+.main-row-holder{}
+/* END Main Rows */
+
+
+/* Temp CSS : To be removed, Only used for demo */
+.card.dragging{
+	width: 262px;
+	position: absolute;
+	top: 213px;
+    left: -216px;
+    z-index: 1;
+}
+/* END Temp CSS : To be removed, Only used for demo */
