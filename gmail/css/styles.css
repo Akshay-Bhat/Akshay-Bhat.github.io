@@ -800,8 +800,6 @@ img{max-width: 100%;}
 }
 .assigned-user-list .assigned-user{
 	display: block;
-    width: 22px;
-    height: 22px;
     border-radius: 22px;
     overflow: hidden;
     border: 2px solid #fff;
@@ -810,10 +808,11 @@ img{max-width: 100%;}
 .assigned-user-list .assigned-user:first-child{margin: 0;}
 .assigned-user-list .assigned-user img{
 	display: block;
-	width: 100%;
-    height: 100%;
+	width: 18px;
+    height: 18px;
 	object-fit: cover;
     object-position: center;
+    max-width: none;
 }
 
 .card-actions{
@@ -1132,7 +1131,7 @@ ul.view-selected-actions li button img{display: block;}
 	flex: 1;
     overflow: auto;
     height: 100%;
-    padding: 10px 21px 0 0;
+    padding: 10px 21px 0 1px;
 }
 
 .each-main-row{margin: 1px 0;}
@@ -1196,6 +1195,24 @@ ul.view-selected-actions li button img{display: block;}
 .each-main-row .row-header .row-title .row-title-name{
 	font: 12px/17px 'Roboto', sans-serif;
     font-weight: 700;
+	border-bottom: 1px dashed transparent;
+	transition: all 0.3s;
+}
+.each-main-row .row-header .row-title .row-title-name:hover{
+	border-color: #002762;
+	transition: all 0.3s;
+}
+.each-main-row .row-header .row-title .column-rename-input{
+	display: inline-block;
+    width: 74px;
+    height: 21px;
+    padding: 2px 6px;
+    font: 12px/17px 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #002762;
+    background: #ffffff;
+    border: 1px solid #1F70EA;
+    border-radius: 2px;
 }
 .each-main-row .row-header .row-title .row-count{
 	font: 12px/17px 'Roboto', sans-serif;
@@ -1245,6 +1262,18 @@ ul.view-selected-actions li button img{display: block;}
 	background: #F7F8FA;
 	box-shadow: 0 1px 0px #E8EAEE;
 	transition: all 0.3s;
+}
+.each-main-row .each-row-card.drop-card{
+	background: #E9F1FF;
+	box-shadow: 0px 1px 0px #E8EAEE;
+}
+.row-drag-placeholder{
+	border: 2px solid #1F70EA;
+	margin: 1px 0;
+}
+.row-card-holder.dragging{
+	background: #E8EAEE;
+	box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.25);
 }
 .row-card-holder.dragging .each-row-card{
 	background: #F7F8FA;
@@ -1378,7 +1407,10 @@ ul.view-selected-actions li button img{display: block;}
 	top: 8px;
     right: 15px;
 }
-.each-main-row .row-body{display: none;}
+.each-main-row .row-body{
+	display: none;
+	position: relative;
+}
 .each-main-row.open .row-body{display: block;}
 
 .each-main-row .each-row-card:hover .card-actions{
@@ -1479,6 +1511,43 @@ ul.view-selected-actions li button img{display: block;}
     font-weight: 500;
     letter-spacing: 0.02em;
 }
+.each-main-row .row-card-content .email-info{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	-ms-align-items: flex-end;
+	align-items: flex-end;
+}
+.each-main-row .row-card-content .link-count-holder{margin-top: 5px;}
+.each-main-row .row-card-content .link-count-button{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: flex-start;
+	align-items: flex-start;
+	cursor: pointer;
+}
+.each-main-row .row-card-content .link-count-button span{
+	display: inline-block;
+	vertical-align: middle;
+	font: 10px/14px 'Roboto', sans-serif;
+	font-weight: 500;
+	letter-spacing: 0.02em;
+}
+.each-main-row .row-card-content .link-count-button img{
+	display: inline-block;
+    vertical-align: middle;
+    margin-left: 2px;
+}
 
 .new-row-container{margin: 12px 0 20px 18px;}
 .new-row-container .new-row-button{
@@ -1499,6 +1568,18 @@ ul.view-selected-actions li button img{display: block;}
 	display: block;
 	font: 12px/17px 'Roboto', sans-serif;
     font-weight: 700;
+}
+.new-row-container .new-column-name-entry{
+	display: block;
+    width: 90px;
+    height: 21px;
+    background: #FFFFFF;
+    border: 1px solid #1F70EA;
+    border-radius: 2px;
+    padding: 2px 6px;
+    font: 12px/17px 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #505053;
 }
 
 .each-main-row .each-row-card.add-row-card{
@@ -1525,6 +1606,12 @@ ul.view-selected-actions li button img{display: block;}
     font-weight: 400;
 	color: #505053;
 }
+.row-chained-card{
+	display: block;
+	position: absolute;
+	right: 15px;
+	top: -7px;
+}
 /* END Main Rows */
 
 
@@ -1535,5 +1622,12 @@ ul.view-selected-actions li button img{display: block;}
 	top: 213px;
     left: -216px;
     z-index: 1;
+}
+.row-dragging{height: 55px;}
+.row-dragging .each-row-card{
+	width: calc(100% - 45px);
+    position: absolute;
+	left: 45px;
+    top: 75px;
 }
 /* END Temp CSS : To be removed, Only used for demo */
