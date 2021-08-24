@@ -745,7 +745,8 @@ img{max-width: 100%;}
 .card.drop-card .card-actions{background-color: #e9f1ff;}
 
 .drag-placeholder{
-	border: 2px solid #1F70EA;
+	background: #1F70EA;
+	border: 1px solid #1F70EA;
 	margin-bottom: 6px;
 }
 .drag-column-placeholder{
@@ -1268,7 +1269,8 @@ ul.view-selected-actions li button img{display: block;}
 	box-shadow: 0px 1px 0px #E8EAEE;
 }
 .row-drag-placeholder{
-	border: 2px solid #1F70EA;
+	background: #1F70EA;
+	border: 1px solid #1F70EA;
 	margin: 1px 0;
 }
 .row-card-holder.dragging{
