@@ -2015,6 +2015,250 @@ ul.details-tasks-list li .tasks-actions button img{display: block;}
 	transition: all 0.3s;
 }
 
+.activities-search-holder{
+	position: relative;
+	margin-bottom: 15px;
+}
+.activities-search-holder .search-input{
+	display: block;
+	width: 100%;
+	background: #F7F8FA;
+	border-radius: 6px;
+	font: 12px/17px 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #1D1D1D;
+	padding: 11px 20px 12px 43px;
+	height: 40px;
+}
+.activities-search-holder .search-input::placeholder{color: #8C8C8C;}
+.activities-search-holder .search-button{
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	cursor: pointer;
+	padding: 12px 10px;
+}
+.activities-search-holder .search-button img{display: block;}
+
+.activities-tab-content{padding: 15px 0;}
+.activities-list li{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: flex-start;
+	align-items: flex-start;
+	margin-bottom: 10px;
+}
+.activities-list li .assigned-user-list{
+	width: auto;
+	margin: 0 16px 0 0;
+}
+.activities-list li .assigned-user-list .assigned-user{
+	width: 36px;
+	height: 36px;
+	border-radius: 36px;
+	background: #E8EAEE;
+}
+.activities-list li .assigned-user-list .assigned-user img{
+	width: 100%;
+	height: 100%;
+}
+.activities-list li .icon-holder{margin-right: 16px;}
+.activities-list li .icon-holder img{display: block;}
+.activities-list li h6{
+	font: 12px/17px 'Roboto', sans-serif;
+    font-weight: 400;
+}
+.activities-list li h6 b{font-weight: 700;}
+.activities-list li p{
+	font: 8px/11px 'Roboto', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+	margin-top: 5px;
+}
+
+#related .each-main-row .row-card-title-holder{
+	width: 200px;
+	margin-right: 18px;
+}
+
+.files-holder{
+	padding: 130px 0;
+	position: relative;
+}
+.files-holder .input-file{
+	display: block;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.files-holder img{
+	display: block;
+	margin: 0 auto;
+}
+.files-holder h6{
+	text-align: center;
+	font: 14px/20px 'Roboto', sans-serif;
+    font-weight: 700;
+}
+.files-holder h6 span{color: #EA2D1F;}
+.files-holder p{
+	text-align: center;
+	font: 12px/17px 'Roboto', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+}
+.files-holder ul.files-list li{
+	position: relative;
+}
+
+ul.files-list{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+ul.files-list li{
+	position: relative;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	width: 200px;
+	height: 200px;
+	border: 1px solid #E8EAEE;
+	border-radius: 6px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+ul.files-list li .row-card-checkbox{
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+}
+ul.files-list li .row-card-checkbox input{
+	display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+ul.files-list li.checked .row-card-checkbox{opacity: 1;}
+ul.files-list li .img-holder{
+	height: calc(100% - 40px);
+	-webkit-flex: 1;
+	-moz-flex: 1;
+	-ms-flex: 1;
+	-o-flex: 1;
+	flex: 1;
+}
+ul.files-list li .img-holder img{
+	display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+ul.files-list li h6{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	font: 14px/20px 'Roboto', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    padding: 8px 8px 12px 8px;
+    background: #ffffff;
+}
+ul.files-list li h6 img{
+	display: block;
+	margin-right: 10px;
+}
+ul.files-list li.checked h6{
+	background: #E9F1FF;
+}
+.related-tab-content{padding: 15px 0;}
+.file-tab-content{padding: 15px 0;}
+
+.file-upload-list{
+	position: relative;
+	background: #E9F1FF;
+	border: 1px dashed #1F70EA;
+	border-radius: 6px;
+	padding: 8px 6px;
+	height: 490px;
+}
+.file-upload-list .drop-file-info{
+	position: absolute;
+	bottom: 13px;
+	left: 50%;
+	margin-left: -107.5px;
+}
+.file-upload-list .drop-file-info .icon-holder{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+}
+.file-upload-list .drop-file-info .icon-holder img{display: block;}
+.file-upload-list .drop-file-info .info-holder{
+	width: 215px;
+	margin: 0 auto;
+	background: #FFFFFF;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	border-radius: 6px;
+	text-align: center;
+	padding: 6px 0 5px 0;
+}
+.file-upload-list .drop-file-info .info-holder h6{
+	font: 14px/20px 'Roboto', sans-serif;
+    font-weight: 400;
+	color: #1D1D1D;
+}
+.file-upload-list .drop-file-info .info-holder p{
+	text-align: center;
+    font: 12px/17px 'Roboto', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    margin-top: 1px;
+}
+.file-upload-list .thumb-image{
+	position: absolute;
+	bottom: 95px;
+	right: 190px;
+	cursor: -webkit-grabbing;
+	cursor: grabbing;
+}
+
 .chatbox-holder{
 	display: -webkit-flex;
 	display: -moz-flex;
