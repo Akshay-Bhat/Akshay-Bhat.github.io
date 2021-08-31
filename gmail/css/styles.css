@@ -1927,7 +1927,7 @@ ul.details-list li .more-mail-holder .more-mail-button img{display: block;}
 	padding: 20px 0 20px 10px;
 }
 
-ul.details-tasks-list{padding: 12px 0 20px 0;}
+ul.details-tasks-list{padding: 0 0 20px 0;}
 ul.details-tasks-list li{
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -2032,7 +2032,7 @@ ul.details-tasks-list li .tasks-actions button img{display: block;}
 	-ms-align-items: center;
 	align-items: center;
 	position: relative;
-	margin-top: 15px;
+	margin-top: 5px;
 }
 .add-task-row .add-new-task{
 	display: block;
@@ -2040,7 +2040,7 @@ ul.details-tasks-list li .tasks-actions button img{display: block;}
 	background: transparent;
 	border-bottom: 1px solid #E8EAEE;
 	height: 44px;
-	padding: 10px 10px 10px 50px;
+	padding: 13px 10px 10px 50px;
 	font: 12px/17px 'Roboto', sans-serif;
     font-weight: 400;
 	transition: all 0.3s;
@@ -2051,7 +2051,7 @@ ul.details-tasks-list li .tasks-actions button img{display: block;}
 }
 .add-task-row .secondary-check-box{
 	position: absolute;
-    left: 20px;
+    left: 21px;
     top: 15px;
 }
 
@@ -2305,6 +2305,10 @@ ul.files-list li.checked h6{
 	font: 14px/20px 'Roboto', sans-serif;
     font-weight: 400;
 	color: #1D1D1D;
+}
+.file-upload-list .drop-file-info .info-holder h6 span{
+	color: #EA2D1F;
+    font-weight: 700;
 }
 .file-upload-list .drop-file-info .info-holder p{
 	text-align: center;
