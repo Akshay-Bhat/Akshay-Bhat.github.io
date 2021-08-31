@@ -38,17 +38,19 @@
 							<a href="#" class="back-button"><img src="../images/back-icon.svg" alt=""></a>
 							<!-- Board View Selected Buttons -->
 							<ul class="view-selected-actions">
-								<li><button type="button"><img src="../images/archive-icon.svg" alt=""></button></li>
-								<li><button type="button"><img src="../images/report-spam.svg" alt=""></button></li>
-								<li><button type="button"><img src="../images/delete-icon.svg" alt=""></button></li>
-								<li><button type="button"><img src="../images/unread-icon.svg" alt=""></button></li>
-								<li><button type="button"><img src="../images/labels-icon.svg" alt=""></button></li>
-								<li><button type="button"><img src="../images/link-icon.svg" alt=""></button></li>
-								<li><button type="button"><img src="../images/droplet-icon.svg" alt=""></button></li>
-								<li><button type="button"><img src="../images/add-user-icon.svg" alt=""></button></li>
-								<li><button type="button"><img src="../images/calender-icon.svg" alt=""></button></li>
-								<li><button type="button"><img src="../images/promotions-icon.svg" alt=""></button></li>
+								<li><button type="button" disabled="disabled"><img src="../images/archive-icon.svg" alt=""></button></li>
+								<li><button type="button" disabled="disabled"><img src="../images/report-spam.svg" alt=""></button></li>
+								<li><button type="button" disabled="disabled"><img src="../images/delete-icon.svg" alt=""></button></li>
+								<li><button type="button" disabled="disabled"><img src="../images/unread-icon.svg" alt=""></button></li>
+								<li><button type="button" disabled="disabled"><img src="../images/labels-icon.svg" alt=""></button></li>
+								<li><button type="button" disabled="disabled"><img src="../images/link-icon.svg" alt=""></button></li>
+								<li><button type="button" disabled="disabled"><img src="../images/droplet-icon.svg" alt=""></button></li>
+								<li><button type="button" disabled="disabled"><img src="../images/add-user-icon.svg" alt=""></button></li>
+								<li><button type="button" disabled="disabled"><img src="../images/calender-icon.svg" alt=""></button></li>
+								<li><button type="button" disabled="disabled"><img src="../images/promotions-icon.svg" alt=""></button></li>
 								<li><button type="button"><img src="../images/move-to-icon.svg" alt=""></button></li>
+								<li><button type="button"><img src="../images/download-icon.svg" alt=""></button></li>
+								<li><button type="button"><img src="../images/delete-file-icon.svg" alt=""></button></li>
 							</ul>
 							<!-- END Board View Selected Buttons -->
 						</div>
@@ -108,22 +110,48 @@
 									<div class="tab-header">
 										<ul class="tab-list">
 											<li><a href="#details">Details</a></li>
-											<li class="active"><a href="#notes">Notes</a></li>
-											<li><a href="#tasks">Tasks</a></li>
+											<li><a href="#notes">Notes</a></li>
+											<li><a href="#tasks">Tasks <span>(1/4)</span></a></li>
 											<li><a href="#activities">Activities</a></li>
-											<li><a href="#files">Files</a></li>
+											<li class="active"><a href="#files">Files</a></li>
 											<li><a href="#related">Related</a></li>
 										</ul>
 									</div>
 									<div class="tab-content">
 										<!-- Tab Content -->
-										<div id="notes" class="notes-tab-content">
-											<div class="notes-cnt">
-												<div class="icon-holder">
-													<img src="../images/notes-icon.svg" alt="">
-												</div>
-												<textarea name="" placeholder="|Add your note here"></textarea>
-											</div>
+										<div id="files" class="file-tab-content">
+											<ul class="files-list">
+												<li>
+													<div class="row-card-checkbox">
+														<input type="checkbox" id="check-file-01">
+														<label for="check-file-01"></label>
+													</div>
+													<div class="img-holder">
+														<img src="../images/file-name-01.png" alt="">
+													</div>
+													<h6 class="neutral-01"><img src="../images/file-image-icon.svg" alt="">Team.jpg</h6>
+												</li>
+												<li class="checked">
+													<div class="row-card-checkbox">
+														<input type="checkbox" id="check-file-02" checked="checked">
+														<label for="check-file-02"></label>
+													</div>
+													<div class="img-holder">
+														<img src="../images/file-name-02.png" alt="">
+													</div>
+													<h6 class="neutral-01"><img src="../images/file-image-icon.svg" alt="">Collaborate-v2.jpg</h6>
+												</li>
+												<li>
+													<div class="row-card-checkbox">
+														<input type="checkbox" id="check-file-03">
+														<label for="check-file-03"></label>
+													</div>
+													<div class="img-holder">
+														<img src="../images/file-name-03.png" alt="">
+													</div>
+													<h6 class="neutral-01"><img src="../images/file-word-icon.svg" alt="">Work from home.docx</h6>
+												</li>
+											</ul>
 										</div>
 										<!-- END Tab Content -->
 									</div>

@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gmail</title>
+<link rel="shortcut icon" href="../images/favicon.ico" />
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<!-- END Google Fonts -->
+<link rel="stylesheet" type="text/css" href="../css/reset.css" media="all" />
+<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+</head>
+<body>
+	<div id="main">
+		<div class="wrapper">
+			<!-- Drop Down -->
+			<div class="dropdown filter-dropdown">
+				<div class="filter-header">
+					<h6 class="dropdown-heading neutral-01">Filter</h6>
+					<a class="close-filter"><img src="../images/close-filter-icon.svg" alt=""></a>
+				</div>
+				<div class="filter-body">
+					<div class="recent-filter">
+						<h6 class="neutral-03">Recent filter</h6>
+						<p class="neutral-02">Card name: <span>Buy new chair  |</span> Card status: <span>Draft   |</span>  Has tag: <span>Urgent, Bug</span></p>
+					</div>
+					<div class="">
+						<div class="each-row">
+							<h6 class="each-row-heading neutral-01">From</h6>
+							<div class="each-row-content">
+								<input type="text" class="filter-input" autofocus="autofocus">
+							</div>
+						</div>
+						<div class="each-row">
+							<h6 class="each-row-heading neutral-01">To</h6>
+							<div class="each-row-content">
+								<input type="text" class="filter-input">
+							</div>
+						</div>
+						<div class="each-row">
+							<h6 class="each-row-heading neutral-01">Subject/Card name</h6>
+							<div class="each-row-content">
+								<input type="text" class="filter-input">
+							</div>
+						</div>
+						<div class="each-row">
+							<h6 class="each-row-heading neutral-01">Card status</h6>
+							<div class="each-row-content">
+								<div class="filter-tags">
+									<div class="filter-tag-content">
+										<p class="each-selected secondary-03 white">
+											<span>Draft</span>
+											<a><img src="../images/each-pill-close.svg" alt=""></a>
+										</p>
+										<p class="each-selected secondary-03 white">
+											<span>Read</span>
+											<a><img src="../images/each-pill-close.svg" alt=""></a>
+										</p>
+									</div>
+									<div class="filter-tag-icon">
+										<img src="../images/select-down-arrow.svg" alt="">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="each-row">
+							<h6 class="each-row-heading neutral-01">Has tag</h6>
+							<div class="each-row-content">
+								<div class="filter-tags">
+									<div class="filter-tag-content">
+										<p class="each-selected brand-03 white">
+											<span>Urgent</span>
+											<a><img src="../images/each-pill-close.svg" alt=""></a>
+										</p>
+										<p class="each-selected warning white">
+											<span>Bug</span>
+											<a><img src="../images/each-pill-close.svg" alt=""></a>
+										</p>
+									</div>
+									<div class="filter-tag-icon">
+										<img src="../images/select-down-arrow.svg" alt="">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="each-row">
+							<h6 class="each-row-heading neutral-01">Assigned to</h6>
+							<div class="each-row-content">
+								<div class="filter-tags">
+									<div class="filter-tag-content"></div>
+									<div class="filter-tag-icon">
+										<img src="../images/select-down-arrow.svg" alt="">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="each-row">
+							<h6 class="each-row-heading neutral-01">Received/Created</h6>
+							<div class="each-row-content">
+								<div class="each-column">
+									<div class="date-picker">
+										<input type="text" class="filter-input">
+										<img src="../images/date-picker-icon.svg" alt="">
+									</div>
+								</div>
+								<div class="each-column"></div>
+							</div>
+						</div>
+						<div class="each-row">
+							<h6 class="each-row-heading neutral-01">Due date</h6>
+							<div class="each-row-content">
+								<div class="each-column">
+									<div class="date-picker">
+										<input type="text" class="filter-input" placeholder="From">
+										<img src="../images/date-picker-icon.svg" alt="">
+									</div>
+								</div>
+								<div class="each-column">
+									<div class="date-picker">
+										<input type="text" class="filter-input" placeholder="To">
+										<img src="../images/date-picker-icon.svg" alt="">
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="filter-checkbox">
+						<div class="row-card-checkbox">
+							<input type="checkbox" id="has-tasks">
+							<label for="has-tasks" class="neutral-01">Has tasks</label>
+						</div>
+						<div class="row-card-checkbox">
+							<input type="checkbox" id="has-notes">
+							<label for="has-notes" class="neutral-01">Has notes</label>
+						</div>
+					</div>
+				</div>
+				<div class="filter-footer">
+					<button type="submit" class="primary-button">Search</button>
+				</div>
+			</div>
+			<!-- END Drop Down -->
+		</div>
+	</div>
+</body>
+</html>

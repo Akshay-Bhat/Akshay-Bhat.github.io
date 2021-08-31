@@ -107,8 +107,8 @@
 								<div class="detail-tab-holder">
 									<div class="tab-header">
 										<ul class="tab-list">
-											<li><a href="#details">Details</a></li>
-											<li class="active"><a href="#notes">Notes</a></li>
+											<li class="active"><a href="#details">Details</a></li>
+											<li><a href="#notes">Notes</a></li>
 											<li><a href="#tasks">Tasks</a></li>
 											<li><a href="#activities">Activities</a></li>
 											<li><a href="#files">Files</a></li>
@@ -117,13 +117,84 @@
 									</div>
 									<div class="tab-content">
 										<!-- Tab Content -->
-										<div id="notes" class="notes-tab-content">
-											<div class="notes-cnt">
-												<div class="icon-holder">
-													<img src="../images/notes-icon.svg" alt="">
-												</div>
-												<textarea name="" placeholder="|Add your note here"></textarea>
-											</div>
+										<div id="details" class="details-tab-content">
+											<ul class="details-list">
+												<li>
+													<div class="user-pic bg-neutral-03">A</div>
+													<div class="mail-info">
+														<div class="mail-top-info">
+															<div>
+																<h6 class="mail-heading neutral-01">Amber Franz</h6>
+																<p class="neutral-01 to-info">To me <img src="../images/to-down-arrow.svg" alt=""></p>
+															</div>
+															<div class="mail-actions">
+																<p class="neutral-03">12th Jul 10:32 AM</p>
+																<button type="button" class="star-button">
+																	<img src="../images/star-icon.svg" alt="">
+																</button>
+																<button type="button" class="reply-button">
+																	<img src="../images/reply-icon.svg" alt="">
+																</button>
+																<button type="button" class="more-button">
+																	<img src="../images/more-gray-icon.svg" alt="">
+																</button>
+															</div>
+														</div>
+														<p class="mail-body neutral-02">Interested but need more info I’m really interested in the first item, however, I had a but need more info I’m really interested but need more info I’m really interested</p>
+														<div class="more-mail-holder">
+															<button class="more-mail-button">
+																<img src="../images/more-mail-icon.svg" alt="">
+															</button>
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="user-pic bg-neutral-02">W</div>
+													<div class="mail-info">
+														<div class="mail-top-info">
+															<div>
+																<h6 class="mail-heading neutral-01">Will Toole</h6>
+															</div>
+															<div class="mail-actions">
+																<p class="neutral-03">12th Jul 10:32 AM</p>
+																<button type="button" class="star-button">
+																	<img src="../images/star-icon.svg" alt="">
+																</button>
+																<button type="button" class="reply-button">
+																	<img src="../images/reply-icon.svg" alt="">
+																</button>
+																<button type="button" class="more-button">
+																	<img src="../images/more-gray-icon.svg" alt="">
+																</button>
+															</div>
+														</div>
+														<p class="mail-body neutral-02">Interested but need more info I’m really interested in the first item, however, I had a but need more info I’m really interested..</p>
+													</div>
+												</li>
+												<li>
+													<div class="user-pic brand-04">F</div>
+													<div class="mail-info">
+														<div class="mail-top-info">
+															<div>
+																<h6 class="mail-heading neutral-01">Frank Smith</h6>
+															</div>
+															<div class="mail-actions">
+																<p class="neutral-03">12th Jul 10:32 AM</p>
+																<button type="button" class="star-button">
+																	<img src="../images/star-icon.svg" alt="">
+																</button>
+																<button type="button" class="reply-button">
+																	<img src="../images/reply-icon.svg" alt="">
+																</button>
+																<button type="button" class="more-button">
+																	<img src="../images/more-gray-icon.svg" alt="">
+																</button>
+															</div>
+														</div>
+														<p class="mail-body neutral-02">Interested but need more info I’m really interested in the first item, however, I had a but need more info I’m really interested..</p>
+													</div>
+												</li>
+											</ul>
 										</div>
 										<!-- END Tab Content -->
 									</div>
@@ -131,7 +202,10 @@
 							</div>
 
 							<!-- Chatbox -->
-							<div class="chatbox-holder">
+							<div class="chatbox-holder collapsed">
+								<a class="chat-collased-button">
+									<img src="../images/collased-chat-icon.svg" alt="">
+								</a>
 								<a class="chat-close"><img src="../images/chat-close-icon.svg" alt=""></a>
 								<div class="chat-main">
 									<div class="each-chat your-message">
