@@ -3764,12 +3764,34 @@ ul.files-list li.checked h6{
     color: #1D1D1D;
 	padding: 7px 15px;
 }
-.notifi-search .notify-close-button{
-	display: block;
-	cursor: pointer;
-	margin-left: 5px;
+
+.notifi-empty{
+	text-align: center;
+	padding: 50px 0 0 0;
 }
-.notifi-search .notify-close-button img{display: block;}
+.notifi-empty .notifi-empty-bell{
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 15px;
+}
+.notifi-empty h6{
+	font: 14px/17px 'Roboto', sans-serif;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.notifi-empty p{
+	width: 70%;
+    margin: 0 auto;
+	font: 12px/17px 'Roboto', sans-serif;
+    font-weight: 400;
+    position: relative;
+}
+.notifi-empty .notify-drop-icon{
+	display: block;
+    position: absolute;
+    right: -20px;
+    bottom: -30px;
+}
 /* END Notification */
 
 /* Board */
@@ -3777,10 +3799,18 @@ ul.files-list li.checked h6{
 	width: 100%;
 	background: #FFFFFF;
 	box-shadow: 0 30px 70px -20px rgba(0, 21, 53, 0.15);
+	padding: 0 50px;
+	overflow: auto;
 }
-.board-main{}
-.board-main .board-header{}
-.board-main .board-header{}
+.board-main .board-header{
+	margin-top: 45px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+}
 .board-main .board-header .close-button{
 	display: block;
     padding: 9px 15px;
@@ -3790,12 +3820,29 @@ ul.files-list li.checked h6{
 	border-radius: 12px;
 	font: 14px/20px 'Roboto', sans-serif;
     font-weight: 700;
+    transition: all 0.3s;
 }
-.board-main .board-header{}
-.board-main{}
-.board-main{}
-.board-main{}
-.board-main .board-heading{}
+.board-main .board-header .close-button:hover{
+	color: #ffffff;
+	background: #1D1D1D;
+	transition: all 0.3s;
+}
+.board-main .board-header .board-back-button{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	font: 16px/22px 'Roboto', sans-serif;
+    font-weight: 400;
+}
+.board-main .board-header .board-back-button .icon-holder{
+	display: block;
+	margin-right: 10px;
+}
+.board-main .board-header .board-back-button .icon-holder img{display: block;}
 .board-main .board-heading h2{
 	font: 40px/47px 'Roboto', sans-serif;
     font-weight: 500;
@@ -3804,11 +3851,338 @@ ul.files-list li.checked h6{
 	font: 16px/22px 'Roboto', sans-serif;
     font-weight: 400;
 }
-.board-main{}
-.board-main{}
-.board-main{}
-.board-main{}
+.board-main .board-steps{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	justify-content: flex-start;
+	margin: 20px 0 40px 0;
+}
+.board-main .board-steps p{
+	font: 10px/14px 'Roboto', sans-serif;
+    font-weight: 700;
+    border-radius: 16px;
+    padding: 4px 8px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    text-align: center;
+}
+.board-main .board-body{
+	max-width: 1130px;
+    margin: 0 auto;
+	padding: 0 0 70px 0;
+}
+.board-main ul.board-list{
+	margin-top: 50px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+.board-main ul.board-list li{margin: 0 24px 24px 0;}
+.board-main ul.board-list li a{
+	text-align: center;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	justify-content: center;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	border-radius: 16px;
+	border: 2px solid transparent;
+	padding: 20px;
+	transition: all 0.3s;
+	width: 163px;
+	height: 145px;
+}
+.board-main ul.board-list li.active a,
+.board-main ul.board-list li a:hover{
+	border: 2px solid #EA2D1F;
+	transition: all 0.3s;
+}
+.board-main ul.board-list li a .icon-holder{
+	width: 48px;
+	height: 40px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	justify-content: center;
+	background: #FFEAE9;
+	border-radius: 56px;
+	margin-bottom: 12px;
+}
+.board-main ul.board-list li a .icon-holder img{display: block;}
+.board-main ul.board-list li a p{
+	font: 16px/22px 'Roboto', sans-serif;
+    font-weight: 700;
+	color: #1D1D1D;
+	transition: all 0.3s;
+}
+.board-main ul.board-list li.active a p,
+.board-main ul.board-list li:hover a p{
+	color: #EA2D1F;
+	transition: all 0.3s;
+}
+.board-main ul.board-list.incoming-list li a{
+	width: 335px;
+	height: auto;
+}
+.board-main ul.board-list.incoming-list li a span{
+	font: 16px/22px 'Roboto', sans-serif;
+    font-weight: 400;
+	color: #1D1D1D;
+	margin-top: 13px;
+	transition: all 0.3s;
+}
+.board-main ul.board-list.incoming-list li.active a span,
+.board-main ul.board-list.incoming-list li:hover a span{
+	color: #EA2D1F;
+	transition: all 0.3s;
+}
+.board-main .board-content{margin-top: 50px;}
+.board-main .board-content .email-input{position: relative;}
+.board-main .board-content .email-input label{
+	display: block;
+	font: 16px/22px 'Roboto', sans-serif;
+    font-weight: 400;
+	color: #1D1D1D;
+	margin-bottom: 8px;
+}
+.board-main .board-content .email-input .email-input{
+	display: block;
+	width: 540px;
+	padding: 0 16px;
+	background: #FFFFFF;
+	border: 1px solid #888181;
+	border-radius: 8px;
+	font: 16px/22px 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #2F1515;
+    height: 40px;
+}
+.board-main .board-content .email-input .email-dropdown{
+	display: block;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 540px;
+	padding: 20px;
+	background: #FFFFFF;
+	box-shadow: 0 30px 70px -20px rgba(0, 21, 53, 0.15);
+	border-radius: 16px;
+}
+.board-main .board-content .email-input h6{
+	font: 10px/14px 'Roboto', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+	margin-bottom: 12px;
+}
+.board-main .email-user-list li{
+	background: #ffffff;
+	border-radius: 4px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	margin-bottom: 6px;
+	padding: 4px;
+}
+.board-main .email-user-list li.checked{background: #E9F1FF;}
+.board-main .email-user-list li .assigned-user-list{
+	width: auto;
+	margin: 0 8px 0 6px;
+}
+.board-main .email-user-list li p{
+	-webkit-flex: 1;
+	-moz-flex: 1;
+	-ms-flex: 1;
+	-o-flex: 1;
+	flex: 1;
+	font: 12px/12px 'Roboto', sans-serif;
+    font-weight: 400;
+}
+.board-main .email-user-list li .row-card-checkbox label{margin: 0;}
+.board-main .board-content .button-holder{
+	margin-top: 100px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	justify-content: flex-start;
+}
+.board-main .board-content .button-holder .primary-button{
+	padding: 17px 32px;
+	text-align: center;
+	font-size: 16px;
+	line-height: 22px;
+}
+.board-content ul.team-users{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	justify-content: flex-start;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin-top: 20px;
+}
+.board-content ul.team-users li{margin: 0 8px 8px 0;}
+.board-content ul.team-users li p{
+	background: #1F70EA;
+	padding: 4px 8px;
+	border-radius: 16px;
+	font: 16px/22px 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #FFFFFF;
+    display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+}
+.board-content ul.team-users li p a{
+	margin-left: 4px;
+	display: block;
+	cursor: pointer;
+}
+.board-content ul.team-users li p a img{display: block;}
+.board-main .board-content .button-holder.step-04{margin-top: 235px;}
+
+.empty-card{height: 60px;}
+.empty-card .card-add{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+.empty-card .card-add img{display: block;}
+
+.main-column-holder{position: relative;}
+
+.secondary-button{
+	display: block;
+	padding: 4px 17px;
+	background: #EA2D1F;
+	font: 14px/20px 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+	cursor: pointer;
+	border-radius: 100px;
+	transition: all 0.3s;
+}
+.secondary-button:hover{
+	background: #d7000d;
+	transition: all 0.3s;
+}
+
+.board-landing-holder{
+	background: rgb(255 255 255 / 80%);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.board-landing-holder .board-landing-content{
+	width: 100%;
+	height: 100%;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	-ms-align-items: center;
+	align-items: center;
+	justify-content: center;
+}
+.board-landing-holder .board-landing-content h6{
+	position: relative;
+	bottom: -40px;
+	font: 32px/38px 'Roboto', sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+.board-landing-holder .board-landing-content img{
+	display: block;
+	margin: 0 auto;
+	margin-bottom: -50px;
+}
+.board-landing-holder .board-landing-content .secondary-button{margin-bottom: 40px;}
+.board-landing-holder .board-landing-content .row-card-checkbox label{
+	font: 12px/12px 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #1D1D1D;
+}
+.board-landing-holder .board-landing-content .row-card-checkbox label:before{
+	margin-right: 10px;
+    border-color: #1D1D1D;
+}
+.board-landing-holder .board-landing-content .row-card-checkbox input:checked + label:after{
+	background: #1F70EA url("../images/check-box-tick.svg") no-repeat;
+    background-position: center center;
+    background-size: 8px 6px;
+}
 /* END Board */
+
+/* Smaller Height */
+@media only screen and (max-height : 800px){
+	.board-landing-holder .board-landing-content img{max-height: 60vh;}
+}
+/* END Smaller Height */
 
 /* Temp CSS : To be removed, Only used for demo */
 .card.dragging{
