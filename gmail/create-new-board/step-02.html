@@ -40,46 +40,54 @@
 			<!-- Container -->
 			<article id="container">
 				<!-- New Board View -->
-				<div class="board-main">
-					<div class="board-header">
-						<div>
+				<div class="board-main grid-container">
+					<div class="row board-header">
+						<div class="col-1">
 							<a href="#" class="board-back-button neutral-01">
 								<span class="icon-holder"><img src="../images/back-arrow-icon.svg" alt=""></span>
 								Back
 							</a>
 						</div>
-						<a href="#" class="neutral-01 close-button">Close</a>
+						<div class="col-10"></div>
+						<div class="col-1">
+							<a href="#" class="neutral-01 close-button">Close</a>
+						</div>
 					</div>
-					<div class="board-body">
-						<div class="board-steps">
-							<p class="secondary-01 secondary-05">step 02 of 04</p>
+					<div class="row">
+						<div class="col-1"></div>
+						<div class="col-11">
+							<div class="board-body">
+								<div class="board-steps">
+									<p class="secondary-01 secondary-05">step 02 of 04</p>
+								</div>
+								<div class="board-heading">
+									<h2 class="neutral-01">Add incoming email</h2>
+								</div>
+								<ul class="board-list incoming-list">
+									<li>
+										<a href="#" class="white">
+											<span class="icon-holder"><img src="../images/board-list-01.png" alt=""></span>
+											<p>Empty</p>
+											<span>Start empty, add emails and tasks manually. For example a To-Do list.</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="white">
+											<span class="icon-holder"><img src="../images/board-list-02.png" alt=""></span>
+											<p>Shared Inbox</p>
+											<span>Manage shared emails on a board. For exemplo support@ or sales@.</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="white">
+											<span class="icon-holder"><img src="../images/board-list-03.png" alt=""></span>
+											<p>Google Groups</p>
+											<span>Manage shared emails on a board. From your google groups or alias.</span>
+										</a>
+									</li>
+								</ul>
+							</div>
 						</div>
-						<div class="board-heading">
-							<h2 class="neutral-01">Add incoming email</h2>
-						</div>
-						<ul class="board-list incoming-list">
-							<li>
-								<a href="#" class="white">
-									<span class="icon-holder"><img src="../images/board-list-01.png" alt=""></span>
-									<p>Empty</p>
-									<span>Start empty, add emails and tasks manually. For example a To-Do list.</span>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="white">
-									<span class="icon-holder"><img src="../images/board-list-02.png" alt=""></span>
-									<p>Shared Inbox</p>
-									<span>Manage shared emails on a board. For exemplo support@ or sales@.</span>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="white">
-									<span class="icon-holder"><img src="../images/board-list-03.png" alt=""></span>
-									<p>Google Groups</p>
-									<span>Manage shared emails on a board. From your google groups or alias.</span>
-								</a>
-							</li>
-						</ul>
 					</div>
 				</div>
 				<!-- END New Board View -->
