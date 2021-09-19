@@ -10,7 +10,7 @@
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 <!-- END Google Fonts -->
 <link rel="stylesheet" type="text/css" href="../../css/reset.css" media="all" />
 <link rel="stylesheet" type="text/css" href="../../css/styles.css" media="all" />
@@ -190,121 +190,153 @@
 							<div class="drag-detail-header">
 								<a href="#" class="back-to-tag-button neutral-03">
 									<span class="icon-holder"><img src="../../images/back-arrow.svg" alt=""></span>
-									<span class="text-holder">Back to tags </span>
+									<span class="text-holder">Back to Automations</span>
 								</a>
 							</div>
-							<div class="drag-detail-body">
-								<div class="row">
-									<div class="col-3"></div>
-									<div class="col-9 add-new-tag-content">
-										<div class="row">
-											<div class="col-12">
-												<lable class="primary-label">Create new tag</lable>
-												<input type="text" class="primary-input" placeholder="Name">
+							<div class="darg-auto-body">
+								<div class="row each-row">
+									<div class="col-3">
+										<label for="" class="secondary-label">Automation name</label>
+									</div>
+									<div class="col-5">
+										<input type="text" class="primary-input" placeholder="Name for this automation">
+									</div>
+								</div>
+								<div class="row each-row">
+									<div class="col-3">
+										<label for="" class="secondary-label">Description <span>(optional)</span></label>
+									</div>
+									<div class="col-9">
+										<input type="text" class="primary-input" placeholder="So that your teammate can understand">
+									</div>
+								</div>
+								<div class="row each-row gap-small">
+									<div class="col-3">
+										<label for="" class="secondary-label">When...</label>
+									</div>
+									<div class="col-7">
+										<div class="each-box">
+											<div class="icon-holder">
+												<img src="../../images/when-icon.svg" alt="">
 											</div>
-										</div>
-										<div class="row">
-											<div class="col-6">
-												<lable class="primary-label">Assign to boards</lable>
-												<div class="secondary-select-holder">
-													<div class="icon-holder">
-														<img src="../../images/select-label-icon.svg" alt="">
+											<div class="content-holder">
+												<div class="content-row">
+													<div class="default-select-holder">
+														<select name="" id="" class="default-select">
+															<option value="">Email</option>
+															<option value="">Email</option>
+															<option value="">Email</option>
+															<option value="">Email</option>
+														</select>
 													</div>
-													<select name="" id="" class="secondary-select">
-														<option value="">Select boards</option>
-														<option value="">Select boards</option>
-														<option value="">Select boards</option>
-														<option value="">Select boards</option>
-													</select>
+													<div class="default-select-holder">
+														<select name="" id="" class="default-select">
+															<option value="">Received</option>
+															<option value="">Received</option>
+															<option value="">Received</option>
+															<option value="">Received</option>
+														</select>
+													</div>
 												</div>
-												<ul class="team-users">
-													<li>
-														<p>
-															<span>Design</span>
-															<a href="#"><img src="../../images/remove-user-icon.svg" alt=""></a>
-														</p>
-													</li>
-													<li>
-														<p>
-															<span>Testing</span>
-															<a href="#"><img src="../../images/remove-user-icon.svg" alt=""></a>
-														</p>
-													</li>
-												</ul>
 											</div>
 										</div>
-										<div class="row">
-											<div class="col-10">
-												<lable class="primary-label">Tag color</lable>
-												<ul class="apply-color-content">
-													<li class="selected">
-														<input type="radio" checked="checked" name="color">
-														<img src="../../images/color-check.svg" alt="">
-														<span class="bg-neutral-03"></span>
-													</li>
-													<li>
-														<input type="radio" name="color">
-														<img src="../../images/color-check.svg" alt="">
-														<span class="brand-02"></span>
-													</li>
-													<li>
-														<input type="radio" name="color">
-														<img src="../../images/color-check.svg" alt="">
-														<span class="brand-03"></span>
-													</li>
-													<li>
-														<input type="radio" name="color">
-														<img src="../../images/color-check.svg" alt="">
-														<span class="warning"></span>
-													</li>
-													<li>
-														<input type="radio" name="color">
-														<img src="../../images/color-check.svg" alt="">
-														<span class="bg-purple"></span>
-													</li>
-													<li>
-														<input type="radio" name="color">
-														<img src="../../images/color-check.svg" alt="">
-														<span class="bg-pink"></span>
-													</li>
-													<li>
-														<input type="radio" name="color">
-														<img src="../../images/color-check.svg" alt="">
-														<span class="secondary-02"></span>
-													</li>
-													<li>
-														<input type="radio" name="color">
-														<img src="../../images/color-check.svg" alt="">
-														<span class="secondary-03"></span>
-													</li>
-													<li>
-														<input type="radio" name="color">
-														<img src="../../images/color-check.svg" alt="">
-														<span class="bg-blue"></span>
-													</li>
-													<li>
-														<input type="radio" name="color">
-														<img src="../../images/color-check.svg" alt="">
-														<span class="bg-green"></span>
-													</li>
-													<li>
-														<input type="radio" name="color">
-														<img src="../../images/color-check.svg" alt="">
-														<span class="bg-light-green"></span>
-													</li>
-													<li>
-														<input type="radio" name="color">
-														<img src="../../images/color-check.svg" alt="">
-														<span class="bg-yellow"></span>
-													</li>
-												</ul>
+									</div>
+								</div>
+								<div class="row each-row gap-small">
+									<div class="col-3">
+										<label for="" class="secondary-label">If..</label>
+									</div>
+									<div class="col-7">
+										<div class="each-box">
+											<div class="icon-holder">
+												<img src="../../images/if-icon.svg" alt="">
+											</div>
+											<div class="content-holder">
+												<div class="content-row">
+													<div class="default-select-holder">
+														<select name="" id="" class="default-select">
+															<option value="">Subject</option>
+															<option value="">Subject</option>
+															<option value="">Subject</option>
+															<option value="">Subject</option>
+														</select>
+													</div>
+													<div class="default-select-holder">
+														<select name="" id="" class="default-select">
+															<option value="">Contains</option>
+															<option value="">Contains</option>
+															<option value="">Contains</option>
+															<option value="">Contains</option>
+														</select>
+													</div>
+												</div>
+												<div class="content-row">
+													<div class="selected-box">
+														<div class="selected-pill">
+															<span class="neutral-01">Marketing</span>
+															<a><img src="../../images/selected-close.svg" alt=""></a>
+														</div>
+														<div class="selected-pill">
+															<span class="neutral-01">Supply</span>
+															<a><img src="../../images/selected-close.svg" alt=""></a>
+														</div>
+														<input type="text" class="select-input">
+													</div>
+												</div>
+												<div class="actions-buttons">
+													<a href="#" class="action-button brand-secondary-03">+ AND  condition</a>
+													<span class="separator neutral-03">|</span>
+													<a href="#" class="action-button brand-secondary-03">+ OR condition </a>
+												</div>
 											</div>
 										</div>
-										<div class="drag-detail-footer">
-											<div class="right-buttons">
-												<button type="reset" class="default-button">Cancel</button>
-												<button type="submit" class="primary-button">Create</button>
+									</div>
+								</div>
+								<div class="row each-row gap-small">
+									<div class="col-3">
+										<label for="" class="secondary-label">Then..</label>
+									</div>
+									<div class="col-7">
+										<div class="each-box">
+											<div class="icon-holder">
+												<img src="../../images/then-icon.svg" alt="">
 											</div>
+											<div class="content-holder">
+												<div class="content-row">
+													<div class="default-select-holder">
+														<select name="" id="" class="default-select">
+															<option value="">Assign to</option>
+															<option value="">Assign to</option>
+															<option value="">Assign to</option>
+															<option value="">Assign to</option>
+														</select>
+													</div>
+												</div>
+												<div class="content-row">
+													<div class="selected-box">
+														<div class="selected-pill">
+															<span class="neutral-01">Merlissa jones</span>
+															<a><img src="../../images/selected-close.svg" alt=""></a>
+														</div>
+														<input type="text" class="select-input">
+													</div>
+												</div>
+												<div class="actions-buttons">
+													<a href="#" class="action-button brand-secondary-03">+ Action</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="footer-row">
+									<div class="row">
+										<div class="col-2">
+											<button type="reset" class="default-button">Cancel</button>
+										</div>
+										<div class="col-6"></div>
+										<div class="col-4 button-holder">
+											<button type="submit" class="primary-button">Save and enable</button>
 										</div>
 									</div>
 								</div>

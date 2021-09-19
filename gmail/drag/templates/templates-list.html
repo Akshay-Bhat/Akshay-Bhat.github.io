@@ -10,7 +10,7 @@
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 <!-- END Google Fonts -->
 <link rel="stylesheet" type="text/css" href="../../css/reset.css" media="all" />
 <link rel="stylesheet" type="text/css" href="../../css/styles.css" media="all" />
@@ -76,7 +76,7 @@
 											<span class="text-holder">Boards</span>
 										</a>
 									</li>
-									<li class="active">
+									<li>
 										<a href="#" class="neutral-01">
 											<span class="icon-holder">
 												<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -88,7 +88,7 @@
 											<span class="text-holder">Automations</span>
 										</a>
 									</li>
-									<li>
+									<li class="active">
 										<a href="#" class="neutral-01">
 											<span class="icon-holder">
 												<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -185,90 +185,149 @@
 						</nav>
 						<div class="col-1"></div>
 						<div class="col-8">
-							<div id="board-settings">
-								<div class="row automations-top-row">
-									<div class="col-6">
-										<h4 class="board-page-title">Automations</h4>
-									</div>
-									<div class="col-6 automations-top-btn">
-										<a href="#" class="primary-button">Create new automation</a>
+							<div class="row automations-top-row">
+								<div class="col-6">
+									<h4 class="board-page-title">Email templates</h4>
+								</div>
+								<div class="col-6 create-top-button">
+									<a href="#" class="primary-button">Create new template</a>
+								</div>
+							</div>
+							<div class="row each-row">
+								<div class="col-7 create-new-btn-holder">
+									<a href="#" class="create-new-button neutral-03">
+										<span class="icon-holder">
+											<img src="../../images/create-new-icon.svg" alt="">
+										</span>
+										<span class="text-holder">Create new folder</span>
+									</a>
+								</div>
+								<div class="col-5">
+									<input type="text" class="primary-input" placeholder="Search">
+								</div>
+							</div>
+							<div class="templates-list">
+								<div class="well">
+									<div class="tem-list-head">
+										<div class="head-name">
+											<div class="head-icon">
+												<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M9.17 6L11.17 8H20V18H4V6H9.17ZM10 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V8C22 6.9 21.1 6 20 6H12L10 4Z" fill="#505053"/>
+												</svg>
+											</div>
+											<p class="head-text neutral-03">Recruiting</p>
+										</div>
+										<div class="head-actions">
+											<h6 class="brand-secondary-05 brand-secondary-03 blue-count">4</h6>
+											<a href="#" class="arrow-button">
+												<img src="../../images/accordian-arrow.svg" alt="">
+											</a>
+										</div>
 									</div>
 								</div>
-								<div class="row each-row">
-									<div class="col-12">
-										<div class="">
-											<input type="text" class="primary-input" placeholder="Search automations">
+								<div class="well">
+									<div class="tem-list-head">
+										<div class="head-name">
+											<div class="head-icon">
+												<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M9.17 6L11.17 8H20V18H4V6H9.17ZM10 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V8C22 6.9 21.1 6 20 6H12L10 4Z" fill="#505053"/>
+												</svg>
+											</div>
+											<p class="head-text neutral-03">Rejections</p>
+										</div>
+										<div class="head-actions">
+											<a href="#" class="">
+												<img src="../../images/trash-delete-bin.svg" alt="">
+											</a>
 										</div>
 									</div>
 								</div>
-								<div>
-									<div class="automations-list">
-										<div class="well">
-											<div class="automations-each">
-												<div class="automations-content">
-													<div class="icon-holder">
-														<img src="../../images/automation-icon-one.svg" alt="">
+								<div class="well open">
+									<div class="tem-list-head">
+										<div class="head-name">
+											<div class="head-icon">
+												<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M9.17 6L11.17 8H20V18H4V6H9.17ZM10 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V8C22 6.9 21.1 6 20 6H12L10 4Z" fill="#505053"/>
+												</svg>
+											</div>
+											<p class="head-text neutral-03">Welcome email</p>
+										</div>
+										<div class="head-actions">
+											<h6 class="brand-secondary-05 brand-secondary-03 blue-count">2</h6>
+											<a href="#" class="arrow-button">
+												<img src="../../images/accordian-arrow.svg" alt="">
+											</a>
+										</div>
+									</div>
+									<div class="tem-list-body">
+										<div class="tem-list-each">
+											<div class="tem-body">
+												<div class="icon-holder brand-05"><img src="../../images/red-mail-icon.svg" alt=""></div>
+												<div>
+													<div class="tem-name-main">
+														<h6 class="tem-detail-name">Campaign 01</h6>
+														<p class="blue-pills">07-05-2021</p>
+														<p class="blue-pills">21 views</p>
+														<div class="tem-user-list">
+															<a><img src="../../images/user-three.png" alt=""></a>
+															<a><img src="../../images/user-four.png" alt=""></a>
+														</div>
 													</div>
-													<div class="content-holder">
-														<h6>Improve customer experience</h6>
-														<p class="neutral-02">Whenever subject contains ‘Supply’ , forward it to ‘Merlissa Jones’</p>
-													</div>
-												</div>
-												<div class="automations-action">
-													<div class="automations-buttons">
-														<a href="#">
-															<img src="../../images/pen-edit-icon.svg" alt="">
-														</a>
-														<a href="#">
-															<img src="../../images/trash-delete-bin.svg" alt="">
-														</a>
-													</div>
-													<label class="primary-switch">
-														<input type="checkbox">
-													  	<span class="slider"></span>
-													</label>
+													<p class="neutral-02 last-seen"><span>Last sent: -</span> <span>Owner: Rafael Coronel</span></p>
 												</div>
 											</div>
-										</div>
-										<div class="well">
-											<div class="automations-each">
-												<div class="automations-content">
-													<div class="icon-holder">
-														<img src="../../images/automation-icon-two.svg" alt="">
-													</div>
-													<div class="content-holder">
-														<h6>Priority</h6>
-														<p class="neutral-02">Whenever subject contains ‘Marketing’ , add tag ‘Urgent’</p>
-													</div>
-												</div>
-												<div class="automations-action">
-													<label class="primary-switch">
-														<input type="checkbox" checked="">
-													  	<span class="slider"></span>
-													</label>
-												</div>
+											<div class="tem-body-actions">
+												<a href="#">
+													<img src="../../images/pen-edit-icon.svg" alt="">
+												</a>
+												<a href="#">
+													<img src="../../images/trash-delete-bin.svg" alt="">
+												</a>
 											</div>
 										</div>
-										<div class="well">
-											<div class="automations-each">
-												<div class="automations-content">
-													<div class="icon-holder">
-														<img src="../../images/automation-icon-three.svg" alt="">
+										<div class="tem-list-each">
+											<div class="tem-body">
+												<div class="icon-holder brand-05"><img src="../../images/red-mail-icon.svg" alt=""></div>
+												<div>
+													<div class="tem-name-main">
+														<h6 class="tem-detail-name">Campaign 01</h6>
+														<p class="blue-pills">07-05-2021</p>
+														<p class="blue-pills">21 views</p>
+														<div class="tem-user-list">
+															<a><img src="../../images/user-three.png" alt=""></a>
+															<a><img src="../../images/user-four.png" alt=""></a>
+														</div>
 													</div>
-													<div class="content-holder">
-														<h6>Add to Read</h6>
-														<p class="neutral-02">Whenever subject contains ‘Bank’ , move it to ‘Read’</p>
-													</div>
-												</div>
-												<div class="automations-action">
-													<label class="primary-switch">
-														<input type="checkbox" checked="">
-													  	<span class="slider"></span>
-													</label>
+													<p class="neutral-02 last-seen"><span>Last sent: -</span> <span>Owner: Rafael Coronel</span></p>
 												</div>
 											</div>
+											<div class="tem-body-actions">
+												<a href="#">
+													<img src="../../images/pen-edit-icon.svg" alt="">
+												</a>
+												<a href="#">
+													<img src="../../images/trash-delete-bin.svg" alt="">
+												</a>
+											</div>
 										</div>
-
+									</div>
+								</div>
+								<div class="well shared-row">
+									<div class="tem-list-head">
+										<div class="head-name">
+											<div class="head-icon">
+												<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M9.17 6L11.17 8H20V18H4V6H9.17ZM10 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V8C22 6.9 21.1 6 20 6H12L10 4Z" fill="#505053"/>
+												</svg>
+											</div>
+											<p class="head-text neutral-03">Shared</p>
+										</div>
+										<div class="head-actions">
+											<h6 class="brand-secondary-05 brand-secondary-03 blue-count">2</h6>
+											<a href="#" class="arrow-button">
+												<img src="../../images/accordian-arrow.svg" alt="">
+											</a>
+										</div>
 									</div>
 								</div>
 							</div>
